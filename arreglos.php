@@ -2,8 +2,11 @@
 
 $meses = array('Enero','Fefrero','Mazo','Abril','Mayo','Junio','Agosto','Septiembre','Octubre','noviembre','diciembre');
 
+// Ordena albabeticamente
 
-
+sort($meses);
+// retroceder alfabrticamente
+rsort($meses);
  ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +18,7 @@ $meses = array('Enero','Fefrero','Mazo','Abril','Mayo','Junio','Agosto','Septiem
 
     <center>
 
-        <h1>Meses del año</h1>
+        <h1>Ordenado Alfabetico</h1>
 
         <?php
 
@@ -27,6 +30,21 @@ $meses = array('Enero','Fefrero','Mazo','Abril','Mayo','Junio','Agosto','Septiem
         ?>
 
 
+         <br>
+        <h1>Oirdenado en retroceso alfabeticamente</h1>
+         
+<?php
+
+         foreach($meses as $mes)
+	{
+
+		echo "<li>".$mes."</li>";
+	 }
+ ?>
+
     </center>
+   
+    
+        
   </body>
 </html>
