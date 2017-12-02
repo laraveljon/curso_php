@@ -2,11 +2,16 @@
 
 $meses = array('Enero','Fefrero','Mazo','Abril','Mayo','Junio','Agosto','Septiembre','Octubre','noviembre','diciembre');
 
+$numeros = array(1,23,5,8,36,7,4,25,78,288);
+
 // Ordena albabeticamente
 
 sort($meses);
+sort($numeros);
 // retroceder alfabrticamente
 rsort($meses);
+rsort($numeros);
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -40,7 +45,16 @@ rsort($meses);
 
 		echo "<li>".$mes."</li>";
 	 }
- ?>
+?>
+<br>
+<h1>Numeros</h1>
+<?php 
+     
+	 foreach($numeros as $num){
+	    echo "<li>".$num."</li>";
+	 }
+
+?>
 
     </center>
    
