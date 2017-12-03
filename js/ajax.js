@@ -56,3 +56,25 @@ function cantidad(){
    });
 
 }
+
+function calular(){
+
+  var fila = $("#fila").val();
+  var columna =$("#columna").val();
+  var dataGral = "fila="+fila+"&columna="+columna;
+
+
+   $.ajax({
+      type:'POST',
+      //dataType:'json',
+      url:'recibe4.php',
+      data: dataGral,
+        success : function(data){
+
+           $("#respuesta").html(data);
+           $('#respuesta').fideIn(1500);
+
+        }
+   });
+
+}
