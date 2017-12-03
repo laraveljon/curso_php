@@ -17,3 +17,25 @@ function Enviar(){
            }
       });
 }
+
+function Enviar_edad(){
+
+  var edad = $("#edad").val();
+  var dataGral = "edad="+edad;
+
+   $.ajax({
+      type:'POST',
+      //dataType:'json',
+      url:'recibe2.php',
+      data: dataGral,
+        success : function(data){
+
+           $("#respuesta").html(data);
+           $('#respuesta').fideIn(1500);
+
+        }
+   });
+
+
+
+}
