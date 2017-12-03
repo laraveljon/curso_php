@@ -35,7 +35,24 @@ function Enviar_edad(){
 
         }
    });
+}
 
+function cantidad(){
 
+  var cantidad = $("#cantidad").val();
+  var dataGral = "cantidad="+cantidad;
+
+   $.ajax({
+      type:'POST',
+      //dataType:'json',
+      url:'recibe3.php',
+      data: dataGral,
+        success : function(data){
+
+           $("#respuesta").html(data);
+           $('#respuesta').fideIn(1500);
+
+        }
+   });
 
 }
